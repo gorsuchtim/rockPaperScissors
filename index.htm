@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="rps__mainContainer">
+      <div class="rps__welcomeCard">
+        <h2>
+          Rock <span class="portfolio__text--green">|</span> Paper
+          <span class="portfolio__text--green">|</span> Scissors
+        </h2>
+        <h3 class="welcomeCard__text">
+          A program that analyzes and adapts to stored user data.
+        </h3>
+        <button class="welcomeCard__button rps__button">Next</button>
+      </div>
+
+      <div class="rps__gameBoard">
+        <div class="rps__tooltip">
+          <h4 class="tooltip__text">Select Rock, Paper, or Scissors.</h4>
+          <button class="rps__button continueWalkthrough">Continue</button>
+        </div>
+        <div class="answerContainer">
+          <div class="answerContainer__category userAnswer">
+            <h2>Player</h2>
+            <div class="optionContainer">
+              <div class="option userOption" id="userRock">
+                <h3>Rock</h3>
+              </div>
+              <div class="option userOption" id="userPaper">
+                <h3>Paper</h3>
+              </div>
+              <div class="option userOption" id="userScissors">
+                <h3>Scissors</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="answerContainer__category result">
+            <h2>
+              Round
+              <span class="rps__round"></span>
+            </h2>
+            <button class="rps__button" id="displayStats">Statistics</button>
+          </div>
+
+          <div class="answerContainer__category compAnswer">
+            <h2>Program</h2>
+            <div class="optionContainer">
+              <div class="option compOption" id="compRock">
+                <h3>Rock</h3>
+              </div>
+              <div class="option compOption" id="compPaper">
+                <h3>Paper</h3>
+              </div>
+              <div class="option compOption" id="compScissors">
+                <h3>Scissors</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dataContainer">
+          <div class="closeDataContainer">
+            <h3>X</h3>
+          </div>
+          <div class="col" id="col1">
+            <h3 class="portfolio__text--green">Reaction to seeing Paper</h3>
+            <p>
+              User chose rock:
+              <span class="pdata pr"></span>
+            </p>
+            <p>
+              User chose paper:
+              <span class="pdata pp"></span>
+            </p>
+            <p>
+              User chose scissors:
+              <span class="pdata ps"></span>
+            </p>
+          </div>
+          <div class="col" id="col2">
+            <h3 class="portfolio__text--green">Reaction to seeing Rock</h3>
+            <p>
+              User chose rock:
+              <span class="rdata rr"></span>
+            </p>
+            <p>
+              User chose paper:
+              <span class="rdata rp"></span>
+            </p>
+            <p>
+              User chose scissors:
+              <span class="rdata rs"></span>
+            </p>
+          </div>
+          <div class="col" id="col3">
+            <h3 class="portfolio__text--green">Reaction to seeing Scissors</h3>
+            <p>
+              User chose rock:
+              <span class="sdata sr"></span>
+            </p>
+            <p>
+              User chose paper:
+              <span class="sdata sp"></span>
+            </p>
+            <p>
+              User chose scissors:
+              <span class="sdata ss"></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

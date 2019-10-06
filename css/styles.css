@@ -1,0 +1,214 @@
+.rps__mainContainer {
+  width: 100%;
+  position: relative;
+  -webkit-display: flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/*----------------------
+Welcome Card Container
+--------------------*/
+
+.rps__welcomeCard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.rps__welcomeCard h3 {
+  padding: 0 1em;
+  margin: 1em;
+}
+
+/*-------------------------
+Tooltip Container
+------------------------*/
+
+.rps__tooltip {
+  padding: 1em;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.25);
+  text-align: center;
+  transition: all 0.25s linear;
+}
+
+.rps__button {
+  padding: 1em 2em;
+  font-size: 1em;
+  border: 1px solid rgba(0, 255, 0, 0.8);
+  border-radius: 0.25em;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: rgba(80, 80, 80, 0.8);
+  margin: 1em 0;
+  transition: all 0.25s linear;
+}
+
+/*----------------------
+Game Board Container
+--------------------*/
+
+.rps__gameBoard {
+  -webkit-display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+  transition: all 0.25s linear;
+}
+
+.answerContainer {
+  -webkit-display: flex;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.option {
+  margin-top: 1em;
+  padding: 1em;
+  border: 1px solid rgba(80, 80, 80, 0.8);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.optionContainer {
+  -webkit-display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.userOption h3 {
+  transition: all 0.2s linear;
+}
+
+.result {
+  -webkit-display: flex;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  margin: 0 1em;
+}
+
+.result > h2 {
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.25);
+}
+
+.dataContainer {
+  position: absolute;
+  width: 75%;
+  margin-left: 5%;
+  top: 2.5em;
+  left: 0;
+  padding: 0 1em;
+  border: 1px solid rgba(80, 80, 80, 0.25);
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.closeDataContainer {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dataContainer .col {
+  margin: 1.5em 0;
+}
+
+.tooltip__text--advance {
+  color: rgba(0, 255, 0, 0.8);
+}
+
+/*--------------------------
+Responsive styles
+---------------------*/
+
+@media only screen and (max-width: 768px) {
+  .rps__tooltip {
+    min-height: 8.25em;
+    margin-top: 1.25em;
+    padding: 0 3em;
+  }
+  .answerContainer__category {
+    margin: 0.5em;
+  }
+  .option {
+    font-size: 0.8em;
+  }
+}
+
+/*------------------
+Utility Classes
+------------------*/
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.rps__selected {
+  background-color: white;
+}
+
+.win {
+  background-color: rgba(0, 255, 0, 0.8);
+  color: white;
+}
+
+.lose {
+  background-color: red;
+  color: white;
+}
+
+.tie {
+  background-color: blue;
+  color: white;
+}
+
+.highlightContinue {
+  background-color: rgba(0, 255, 0, 0.8);
+}
+
+.highlightUserAnswer {
+  background-color: rgba(80, 80, 80, 0.5);
+  color: white;
+  border-radius: 5px;
+}
+
+.pulse {
+  -webkit-animation: pulse 0.5s 1 ease-in-out;
+  animation: pulse 0.5s 1 ease-in-out;
+}
+
+-webkit-@keyframes pulse {
+  from {
+    -webkit-transform: scale(1.25);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1.25);
+  }
+  to {
+    transform: scale(1);
+  }
+}
